@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #000000, #434343);
+}
+.image-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 110px;
+  overflow: hidden;
+  border: 5px solid rgb(65, 58, 58);
+  position: relative;
+}
+.image-slide {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+#btnPrev {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  font-size: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 5px;
+  border-radius: 20px;
+}
+#btnNxt {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  font-size: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 20px;
+}
