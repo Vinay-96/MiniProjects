@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>Sound Board</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="items">
+        <audio src="./audio/bird_audio.wav" id="bird"></audio>
+        <img src="./images/birds.jpg" alt="birds" onclick="playBird()" />
+      </div>
+
+      <div class="items">
+        <audio src="./audio/cat_audio.wav" id="cat"></audio>
+        <img src="./images/cat.jpg" alt="cat" onclick="playCat()" />
+      </div>
+      <div class="items">
+        <audio src="./audio/horse_audio.wav" id="horse"></audio>
+        <img src="./images/horse.jpg" alt="horse" onclick="playHorse()" />
+      </div>
+      <div class="items">
+        <audio src="./audio/chicken_audio.wav" id="chicken"></audio>
+        <img src="./images/chicken.jpg" alt="chicken" onclick="playChick()" />
+      </div>
+      <div class="items">
+        <audio src="./audio/cow_audio.wav" id="cow"></audio>
+        <img src="./images/cow.jpg" alt="cow" onclick="playCow()" />
+      </div>
+      <div class="items">
+        <audio src="./audio/wolf_audio.wav" id="wolf"></audio>
+        <img src="./images/wolf.jpg" alt="wolf" onclick="playWolf()" />
+      </div>
+    </div>
+    <script>
+      function playBird() {
+        document.getElementById("bird").play();
+      }
+      function playCat() {
+        document.getElementById("cat").play();
+      }
+      function playHorse() {
+        document.getElementById("horse").play();
+      }
+      function playChick() {
+        document.getElementById("chicken").play();
+      }
+      function playCow() {
+        document.getElementById("cow").play();
+      }
+      function playWolf() {
+        document.getElementById("wolf").play();
+      }
+    </script>
+  </body>
+</html>
