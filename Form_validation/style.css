@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+  top: -350px;
+  width: 600px;
+  height: 600px;
+  background: #e707e7;
+}
+
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 700px;
+  height: 500px;
+  background: #8b03ca;
+}
+
+section .color:nth-child(3) {
+  bottom: 500px;
+  right: 100px;
+  width: 500px;
+  height: 500px;
+  background: #84f108;
+}
+
+.box {
+  position: relative;
+}
+.box .square {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  animation: move 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+.box .square:nth-child(1) {
+  top: -9px;
+  right: -60px;
+  width: 100px;
+  height: 100px;
+}
+.box .square:nth-child(2) {
+  top: 180px;
+  left: -100px;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+.box .square:nth-child(3) {
+  bottom: 150px;
+  right: -60px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.box .square:nth-child(4) {
+  bottom: 700px;
+  right: -160px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.box .square:nth-child(5) {
+  bottom: 500px;
+  left: -160px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.container {
+  position: relative;
+  width: 550px;
+  margin: 30px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+.form > h2 {
+  position: relative;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form > h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100px;
+  height: 4px;
+  background: #fff;
+}
+.form .row {
+  width: 100%;
+  margin-top: 20px;
+}
+.form .row input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+.form .row input[type="submit"] {
+  background: #fff;
+  color: #000;
+  width: 150px;
+  transition: 1s;
+  cursor: pointer;
+}
+.form .row input[type="submit"]:hover {
+  background: linear-gradient(to right, #a8ff78, #78ffd6);
+  box-shadow: -9px 12px 20px 20px rgb(255 255 255 / 20%);
+}
+.form .row input[type="reset"] {
+  background: #fff;
+  color: #000;
+  width: 150px;
+  transition: 1s;
+  cursor: pointer;
+}
+.form .row input[type="reset"]:hover {
+  background: linear-gradient(to right, #f12711, #f5af19);
+  box-shadow: -1px 11px 14px 20px rgb(255 255 255 / 20%);
+}
+.form-inline {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+.comments {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  align-items: center;
+}
+#btns {
+  display: flex;
+  justify-content: space-around;
+}
+.error {
+  color: red;
+}
+textarea {
+  width: 465px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 17px 14px 20px 0px rgb(0 0 0 / 27%);
+}
+
+textarea::placeholder {
+  text-align: center;
+  font-size: 20px;
+}
