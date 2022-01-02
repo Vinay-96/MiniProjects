@@ -6,4 +6,5 @@ A few mini projects made using HTML/CSS/JavaScript
 <li>Sound Board</li>
 <li>Tetris</li>
 <li>Form validation</li>
+<li>Fetch API</li>
 </ol>
