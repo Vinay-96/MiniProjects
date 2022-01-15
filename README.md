@@ -5,6 +5,6 @@ A few mini projects made using HTML/CSS/JavaScript
 <li>Image slider</li>
 <li>Sound Board</li>
 <li>Tetris</li>
-<li>Form validation</li>
+<li>Form validation using REgex</li>
 <li>Fetch API</li>
 </ol>
