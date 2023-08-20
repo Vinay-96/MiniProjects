@@ -7,4 +7,5 @@ A few mini projects made using HTML/CSS/JavaScript
 <li>Tetris</li>
 <li>Form validation using REgex</li>
 <li>Fetch API</li>
+<li>Short URL</li>
 </ol>
