@@ -13,7 +13,9 @@ async function generateNewURL(req, res) {
     vistHistory: [],
   });
 
-  return res.json({ message: shortId });
+  return res.render("home", { id: shortId });
+
+  // return res.json({ message: shortId });
 }
 
 async function redirectToSite(req, res) {
@@ -45,8 +47,14 @@ async function analyticsOfShortId(req, res) {
   });
 }
 
+async function getAllShortIds(req, res) {
+  const shortIds = await URLModel.find({}).lean();
+  return res.render("home", { urls: shortIds });
+}
+
 module.exports = {
   generateNewURL,
   redirectToSite,
   analyticsOfShortId,
+  getAllShortIds,
 };

@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { generateNewURL, redirectToSite, analyticsOfShortId } = require("../controllers/url");
+const { generateNewURL, redirectToSite, analyticsOfShortId, getAllShortIds } = require("../controllers/url");
 
-router.post("/", generateNewURL);
+router.post("/generate", generateNewURL);
+
+router.get("/getAllIds" , getAllShortIds)
 
 router.get("/:shortId", redirectToSite);
 
